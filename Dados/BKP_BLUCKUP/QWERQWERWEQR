@@ -1,0 +1,113 @@
+() 2018/06/27 08:58:05:865:Verificando se pode excluir os arquivos "C:\Hercules\Dados\INSTALACAO\BKP_BLUCKUP\C:\Hercules\Dados\INSTALACAO\BKP_BLUCKUP\HERCULES_*.z"
+() 2018/06/27 08:58:05:857:Verificando se pode excluir os arquivos "C:\Financeiro\Dados\BKP_BLUCKUP\C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_*.gbk"
+() 2018/06/27 08:58:05:850:Verificando se pode excluir os arquivos "C:\Financeiro\Dados\BKP_BLUCKUP\C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_*.7z"
+() 2018/06/27 08:58:04:864:Verificando se pode excluir os arquivos "C:\Hercules\Dados\INSTALACAO\BKP_BLUCKUP\C:\Hercules\Dados\INSTALACAO\BKP_BLUCKUP\HERCULES_*.z"
+() 2018/06/27 08:58:04:857:Verificando se pode excluir os arquivos "C:\Financeiro\Dados\BKP_BLUCKUP\C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_*.gbk"
+() 2018/06/27 08:58:04:849:Verificando se pode excluir os arquivos "C:\Financeiro\Dados\BKP_BLUCKUP\C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_*.7z"
+() 2018/06/26 17:16:27:680:Agendamento: Horário: 2018/06/19 17:15:00 - Diário
+() 2018/06/26 17:16:27:680:Agendamento: Horário: 2018/06/19 17:15:00 - Diário
+() 2018/06/26 17:16:02:123: 
+
+() 2018/06/26 17:16:02:091:Término do backup!
+
+() 2018/06/26 17:16:01:574:Erro ao transferir o arquivo "C:\Hercules\Dados\INSTALACAO\BKP_BLUCKUP\HERCULES_201806261715.7z" --> 
+() 2018/06/26 17:16:00:821:Tamanho do arquivo 19509822 bytes
+() 2018/06/26 17:16:00:814:Iniciando a transferência do arquivo "C:\Hercules\Dados\INSTALACAO\BKP_BLUCKUP\HERCULES_201806261715.7z" para ASDF/1300 ASDFDSA
+
+() 2018/06/26 17:16:00:788:Erro ao transferir o arquivo "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261715.7z" --> 
+() 2018/06/26 17:15:59:948:Tamanho do arquivo 9006 bytes
+() 2018/06/26 17:15:59:932:Iniciando a transferência do arquivo "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261715.7z" para ASDF/1300 ASDFDSA
+() 2018/06/26 17:15:59:932:     Arquivo existente: "true
+() 2018/06/26 17:15:59:932:Arquivo: "C:\Hercules\Dados\INSTALACAO\BKP_BLUCKUP\HERCULES_201806261715.7z"
+() 2018/06/26 17:15:59:917:     Arquivo existente: "true
+() 2018/06/26 17:15:59:917:Arquivo: "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261715.7z"
+() 2018/06/26 17:15:59:901: (--> pEnviaBases <--)  : Lista de arquivos a enviar:
+() 2018/06/26 17:15:59:901: (--> pEnviaBases <--)  : Quantidade de arquivos a enviar = 2
+() 2018/06/26 17:15:59:383:C:\Hercules\Dados\INSTALACAO\BKP_BLUCKUP\HERCULES_201806261715.7z : Foi adicionado a lista de envios
+() 2018/06/26 17:15:59:375:Adicionando o arquivo "C:\Hercules\Dados\INSTALACAO\BKP_BLUCKUP\HERCULES_201806261715.7z" na lista de envios pendentes
+() 2018/06/26 17:15:35:591:Iniciando a compactação do arquivo de envio "C:\Hercules\Dados\INSTALACAO\BKP_BLUCKUP\HERCULES_201806261715.gbk"
+() 2018/06/26 17:15:35:591:Verificando o arquivo "C:\Hercules\Dados\INSTALACAO\BKP_BLUCKUP\HERCULES_201806261715.gbk" a ser enviado
+() 2018/06/26 17:15:35:584:Adicionando o arquivo "C:\Hercules\Dados\INSTALACAO\BKP_BLUCKUP\HERCULES_201806261715.gbk" a lista de envio
+
+() 2018/06/26 17:15:35:568:Backup efetuado com sucesso!   -   gbak:writing names mapping 
+() 2018/06/26 17:15:27:889:gbak:database C:\Hercules\Dados\INSTALACAO\HERCULES.GDB has a page size of 8192 bytes. 
+() 2018/06/26 17:15:27:736:Fazendo backup da base: HERCULES (localhost:C:\Hercules\Dados\INSTALACAO\HERCULES.GDB)  em C:\Hercules\Dados\INSTALACAO\BKP_BLUCKUP\HERCULES_201806261715.gbk
+() 2018/06/26 17:15:27:736:Iniciando backup da base: HERCULES localizada em C:\Hercules\Dados\INSTALACAO\HERCULES.GDB
+() 2018/06/26 17:15:27:720:Buscando parâmetros para a base : 1
+
+
+() 2018/06/26 17:15:27:651:Início do backup da base 1
+() 2018/06/26 17:15:27:651: 
+
+() 2018/06/26 17:15:27:635:Verificando se pode excluir os arquivos "C:\Financeiro\Dados\BKP_BLUCKUP\C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_*.gbk"
+() 2018/06/26 17:15:27:635:Verificando se pode excluir os arquivos "C:\Financeiro\Dados\BKP_BLUCKUP\C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_*.7z"
+() 2018/06/26 17:15:27:635:Verificando se pode excluir os arquivos "C:\Financeiro\Dados\BKP_BLUCKUP\C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_*.z"
+() 2018/06/26 17:15:27:087:C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261715.7z : Foi adicionado a lista de envios
+() 2018/06/26 17:15:27:072:Adicionando o arquivo "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261715.7z" na lista de envios pendentes
+() 2018/06/26 17:15:27:003:Iniciando a compactação do arquivo de envio "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261715.gbk"
+() 2018/06/26 17:15:27:003:Verificando o arquivo "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261715.gbk" a ser enviado
+() 2018/06/26 17:15:27:003:Adicionando o arquivo "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261715.gbk" a lista de envio
+
+() 2018/06/26 17:15:26:987:Backup efetuado com sucesso!   -   gbak:writing names mapping 
+() 2018/06/26 17:15:26:871:gbak:database C:\Financeiro\Dados\FINANCEIRO.GDB has a page size of 4096 bytes. 
+() 2018/06/26 17:15:26:787:Fazendo backup da base: ASDFSDA (localhost:C:\Financeiro\Dados\FINANCEIRO.GDB)  em C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261715.gbk
+() 2018/06/26 17:15:26:787:Iniciando backup da base: ASDFSDA localizada em C:\Financeiro\Dados\FINANCEIRO.GDB
+() 2018/06/26 17:15:26:787:Buscando parâmetros para a base : 0
+
+
+() 2018/06/26 17:15:26:771:Início do backup da base 0
+() 2018/06/26 17:15:26:765: 
+
+() 2018/06/26 17:15:26:702:Verificando se pode excluir os arquivos "C:\Financeiro\Dados\BKP_BLUCKUP\C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_*.gbk"
+() 2018/06/26 17:15:26:702:Verificando se pode excluir os arquivos "C:\Financeiro\Dados\BKP_BLUCKUP\C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_*.7z"
+() 2018/06/26 17:07:37:053: 
+
+() 2018/06/26 17:07:37:053:Término do backup!
+
+() 2018/06/26 17:07:36:536:Erro ao transferir o arquivo "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261707.7z" --> 
+() 2018/06/26 17:07:34:089:Tamanho do arquivo 9000 bytes
+() 2018/06/26 17:07:34:084:Iniciando a transferência do arquivo "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261707.7z" para ASDF/1300 ASDFDSA
+() 2018/06/26 17:07:34:078:     Arquivo existente: "true
+() 2018/06/26 17:07:34:061:Arquivo: "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261707.7z"
+() 2018/06/26 17:07:34:061: (--> pEnviaBases <--)  : Lista de arquivos a enviar:
+() 2018/06/26 17:07:34:061: (--> pEnviaBases <--)  : Quantidade de arquivos a enviar = 1
+() 2018/06/26 17:07:33:553:C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261707.7z : Foi adicionado a lista de envios
+() 2018/06/26 17:07:33:548:Adicionando o arquivo "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261707.7z" na lista de envios pendentes
+() 2018/06/26 17:07:33:332:Iniciando a compactação do arquivo de envio "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261707.gbk"
+() 2018/06/26 17:07:33:327:Verificando o arquivo "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261707.gbk" a ser enviado
+() 2018/06/26 17:07:33:322:Adicionando o arquivo "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261707.gbk" a lista de envio
+
+() 2018/06/26 17:07:33:311:Backup efetuado com sucesso!   -   gbak:writing names mapping 
+() 2018/06/26 17:07:33:174:gbak:database C:\Financeiro\Dados\FINANCEIRO.GDB has a page size of 4096 bytes. 
+() 2018/06/26 17:07:33:117:Fazendo backup da base: ASDFSDA (localhost:C:\Financeiro\Dados\FINANCEIRO.GDB)  em C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261707.gbk
+() 2018/06/26 17:07:33:073:Iniciando backup da base: ASDFSDA localizada em C:\Financeiro\Dados\FINANCEIRO.GDB
+() 2018/06/26 17:07:33:069:Buscando parâmetros para a base : 0
+
+
+() 2018/06/26 17:07:33:052:Início do backup da base 0
+() 2018/06/26 17:07:33:047: 
+
+() 2018/06/26 17:07:33:038:Verificando se pode excluir os arquivos "C:\Financeiro\Dados\BKP_BLUCKUP\C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_*.gbk"
+() 2018/06/26 17:07:33:034:Verificando se pode excluir os arquivos "C:\Financeiro\Dados\BKP_BLUCKUP\C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_*.7z"
+() 2018/06/26 17:05:10:907: 
+
+() 2018/06/26 17:05:10:897:Término do backup!
+() 2018/06/26 17:05:10:392: (--> pEnviaBases <--)  : Lista de arquivos a enviar:
+() 2018/06/26 17:05:10:386: (--> pEnviaBases <--)  : Quantidade de arquivos a enviar = 0
+() 2018/06/26 17:05:09:880:Erro ao compactar o arquivo: "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261705.gbk"   --> Erro: "O programa externo "C:\bluckupApl\7za.exe" não foi encontrado!"
+() 2018/06/26 17:05:09:875:Iniciando a compactação do arquivo de envio "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261705.gbk"
+() 2018/06/26 17:05:09:844:Verificando o arquivo "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261705.gbk" a ser enviado
+() 2018/06/26 17:05:09:838:Adicionando o arquivo "C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261705.gbk" a lista de envio
+
+() 2018/06/26 17:05:09:830:Backup efetuado com sucesso!   -   gbak:writing names mapping 
+() 2018/06/26 17:05:09:708:gbak:database C:\Financeiro\Dados\FINANCEIRO.GDB has a page size of 4096 bytes. 
+() 2018/06/26 17:05:09:630:Fazendo backup da base: ASDFSDA (localhost:C:\Financeiro\Dados\FINANCEIRO.GDB)  em C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_201806261705.gbk
+() 2018/06/26 17:05:06:208:Iniciando backup da base: ASDFSDA localizada em C:\Financeiro\Dados\FINANCEIRO.GDB
+() 2018/06/26 17:05:06:204:Buscando parâmetros para a base : 0
+
+
+() 2018/06/26 17:05:06:190:Início do backup da base 0
+() 2018/06/26 17:05:06:187: 
+
+() 2018/06/26 17:05:06:180:Verificando se pode excluir os arquivos "C:\Financeiro\Dados\BKP_BLUCKUP\C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_*.gbk"
+() 2018/06/26 17:05:06:176:Verificando se pode excluir os arquivos "C:\Financeiro\Dados\BKP_BLUCKUP\C:\Financeiro\Dados\BKP_BLUCKUP\FINANCEIRO_*.7z"

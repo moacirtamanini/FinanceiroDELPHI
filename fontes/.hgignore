@@ -1,0 +1,4 @@
+syntax: glob
+Dados/FINANCEIRO.GDB
+*.dcu
+Financeiro.exe

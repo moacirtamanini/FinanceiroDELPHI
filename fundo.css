@@ -1,0 +1,10 @@
+body{
+	background-color: #000000;
+}
+
+#fundo{
+	width: 100%;
+	height: 1279px;
+	background-image: url(imagens/fundo.jpg);
+	background-repeat: no-repeat;
+}

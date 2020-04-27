@@ -1,0 +1,425 @@
+Projeto Financeiro:
+Objetivo: 
+	Controlar o Contas A Receber
+	Controlar o Contas A Pagar
+	Controlar: Caixa
+        Contas bancárias
+        Cartões de crédito e débito
+	
+Mostrar o resumo do Financeiro através de consultas e relatórios
+Fluxo de caixa
+Não faz contabilização
+
+Tipos:
+Cadastros:
+
+TEnderecos:
+	id             --> I      - id único
+	cdCEP          --> X(08)  - código do CEP
+	dsUF           --> X(02)  - UF
+	dsCidade       --> X(50)  - nome da cidade
+	dsLogradouro   --> X(100) - logradouro: rua, av, praça, etc
+	dsNumero       --> X(12)  - número do endereço
+	dsBairro       --> X(50)  - bairro
+	dsComplemento  --> X(50)  - complemento do endereço
+	dsSite         --> X(255) - site www
+
+TEmails:
+	id	       --> I 	  - id único
+	tipoEmail      --> I      - Tipo de email {0-Pessoal / 2-Trabalho / 3-
+	dsEmail        --> X(255) - e-mail
+
+TFones:
+	id             --> I   	  - id único
+	tipoFone       --> I	  - Tipo de telefone {0-Res / 1-Com / 2-Cel / 3-Nex / 4-Rec / 5-Out}
+	dsFoneDDD   --> N(03)     - fone DDD
+	dsFoneNRO   --> N(08)     - fone número
+
+TPessoas:
+	TPessoa
+	id		--> I      - id único
+	cdCPFCNPJ	--> N(14)  - CPF/CNPJ
+	dsNome		--> X(100) - nome
+	dsApelido	--> X(20)  - apelido 
+	Endereco: TEndereco
+	Email   : TEmails
+	Fone    : TFone
+	status_id	--> B      - 0-Ativo ou 1-Inativo
+
+TBandeiras: Bandeiras de cartão de crédito
+	id 		--> I	   - id único
+	dsDescricao	--> X(30)  - nome da bandeira
+
+TCartoes:
+	id              --> I      - id único
+	cdBandeira      --> TBandeira
+	cdTipoCartao    --> I	  - tipo de cartão: 0-Débito || 1-Crédito || 2-Ambos
+	dsDescricao     --> X(30)  - descrição ou nome do cartão
+	dsNome          --> X(50)  - nome do portador
+	dsNroIni        --> X(04)  - 4 digitos iniciais do cartao
+	dsNroFim        --> X(05)  - 5 digitos finais do cartao
+	dsSenhCom       --> X(255) - Senha para compras e saques
+	dsSiteBan       --> X(255) - Site da bandeira ou banco 
+	dsSenhSite      --> X(255) - Senha do site
+	dtValidade      --> Dt     - data validade do plastico
+	cdDiaFatFec     --> I      - dia de fechto da fatura
+	cdDiaFatVen     --> I      - dia de vencto da fatura
+	cdCategoria     --> I	   - id do plano de categorias para lancamentos
+	status_id	--> B      - 0-Ativo ou 1-Inativo
+
+TCategorias:
+	id              --> I     - id único
+	dsClassificao   --> X(30) - classificação de níveis em ponto Ex: 1-TOTAL GERAL || 1.1-TOTAL CAIXA || 1.1.001-Caixa
+	dsApelido       --> X(30) - apelido da categoria
+	dsDescricao     --> X(60) - descrição ou nome da categoria
+	tpConta         --> I     - 0-Sintética ou 1-Analítica
+	dtCadastro      --> DtHr  - Data de inclusão
+	status_id	--> B     - 0-Ativa ou 1-Inativa
+
+
+THistorico:
+	id              --> I      - id único
+	dsHistorico     --> X(100)
+
+
+TLancamento:
+	id              --> I     - id único
+	dtLancto        --> DtHr  - data e hora do lançamento
+	cdCategoria     --> I     - Categoria -> TPlanoCategoria
+	tpLancto        --> X(01) - E-Entrada || S-Saida
+	vlValor         --> V     - Valor do lançamento
+	cdTpCliFor      --> I     - -1-Indefinido || 0-Cliente || 1-Fornecedor
+	cdCliFor        --> I     - código do cliente ou fornecedor
+	dsDocto         --> X(30) - documento 
+	cdHisto         --> I     - código do histórico padrão
+	dsHisto         --> X(100)- histórico descritivo
+	status_id	--> B     - 0-Ativo ou 1-Inativo
+
+
+
+Cadastros necessários:
+	Empresas: empresas
+		TPessoa
+
+	Usuários: usuarios
+		TUsuario
+
+	Clientes: clientes
+		TPessoa
+
+	Fornecedores: fornecedores
+		TPessoa
+
+	PlanoCategorias:
+		TPlanoCategoria
+
+	Bandeiras:
+		TBandeira
+	
+	CartaoDebito:
+		TCartao
+
+	CartaoCredito:
+		TCartao
+
+	Lancamentos:
+		TLancamento
+
+---------------------------------------------------------------------------------
+Exemplos de dados:
+
+TEndereco:
+id		= 1
+cdCEP		= 89050100
+dsUF		= "SC"
+dsCidade	= "BLUMENAU"
+dsLogradouro	= "RUA REP. ARGENTINA"
+dsNumero	= "176"
+dsBairro	= "PONTA AGUDA"
+dsComplemento	= "CASA BRANCA NA ESQUINA"
+dsEmail		= "comercial@servidor.com"
+dsSite		= "http://www.bludata.com.br/login"
+
+
+TFone:
+id		= 1
+dsFoneCenDDD	= 47
+dsFoneCenNRO	= 33301236
+dsFoneComDDD	= 47
+dsFoneComNRO	= 21234000
+dsFoneCelDDD	= 47
+dsFoneCelNRO	= 992687500
+dsFoneFaxDDD	= 44
+dsFoneFaxNRO	= 21234000
+
+
+TPessoaFisica:
+id		= 1
+cdCPF		= 57715785920
+dsNome		= "MOACIR TAMANINI"
+dsApelido	= ""
+dtCadastro	= 21/05/2017
+Endereco	= 1
+Fone		= 1
+boStatus	= 0
+
+
+TPessoaJuridica
+id		= 2
+cdCNPJ		= 82637513000172
+dsNome		= "BLUDATA PROCESSAMENTOS DE DADOS LTDA"
+dsApelido	= "BLUDATA"
+dtCadastro	= 21/05/2017 14:51:00
+Endereco	= 1
+Fone		= 1
+boStatus	= 0
+
+
+TUsuario:
+id		= 1
+Endereco	= 3
+Fone		= 3
+dsSenha		= 'senha'
+dtCadastro	= 21/05/2017 14:52:01
+boStatus	= 0
+
+
+TBandeira
+id		= 1
+dsDescricao	= "AMEX"
+
+TBandeira
+id		= 2
+dsDescricao	= "VISA"
+
+
+TCartao:
+id		= 1
+cdBandeira 	= 1
+cdTipoCartao	= 1
+dsDescricao	= "AMEX GOLD"
+dsNome 		= "MOACIR TAMANINI"
+dsNroIni	= "3784"
+dsNroFim	= "56006"
+dsSenhCom	= "1234"
+dsSiteBan	= "XYZ3233UTd#dff"
+dsSenhSite	= "UIDfoker12T#999"
+dtValidade	= 2018-12-31
+dtDiaFatFec	= 13
+dtDiaFatVen	= 25
+cdCategoria	= 5
+boStatus	= 0
+
+TCartao:
+id		= 2
+cdBandeira 	= 2
+cdTipoCartao	= 2
+dsDescricao	= "VIACREDI VISA"
+dsNome 		= "MOACIR TAMANINI"
+dsNroIni	= "5485"
+dsNroFim	= "01001"
+dsSenhCom	= "1234"
+dsSiteBan	= "XYZ3233UTd#dff"
+dsSenhSite	= "UIDfoker12T#999"
+dtValidade	= 2018-12-31
+dtDiaFatFec	= 30
+dtDiaFatVen	= 10
+cdCategoria	= 6
+boStatus	= 0
+
+
+TCartaoDebito:
+id		= 1
+cdCartao	= 1
+
+TCartaoCredito:
+id		= 2
+cdCartao	= 2
+
+
+
+
+TPlanoCategoria:
+id		= 1
+dsClassificao	= 1
+dsApelido	= ""
+dsDescricao	= "TOTAL GERAL"
+tpConta		= 0
+dtCadastro	= 2017/05/01 14:58:22
+boStatus	= 0
+
+id		= 2
+dsClassificao	= 1.1
+dsApelido	= ""
+dsDescricao	= "CAIXA GERAL"
+tpConta		= 0
+dtCadastro	= 2017/05/01 14:58:22
+boStatus	= 0
+
+id		= 3
+dsClassificao	= 1.1.0001
+dsApelido	= "CX"
+dsDescricao	= "Caixa Joao"
+tpConta		= 1
+dtCadastro	= 2017/05/01 14:58:22
+boStatus	= 0
+
+id		= 4
+dsClassificao	= 1.1.0002
+dsApelido	= "CX"
+dsDescricao	= "Caixa Maria"
+tpConta		= 1
+dtCadastro	= 2017/05/01 14:58:22
+boStatus	= 0
+
+id		= 5
+dsClassificao	= 1.2
+dsApelido	= ""
+dsDescricao	= "BANCOS CONTA MOVIMENTO"
+tpConta		= 0
+dtCadastro	= 2017/05/01 14:58:22
+boStatus	= 0
+
+id		= 3
+dsClassificao	= 1.2.0001
+dsApelido	= "BB"
+dsDescricao	= "Banco do Brasil Conta Corrente"
+tpConta		= 1
+dtCadastro	= 2017/05/01 14:58:22
+boStatus	= 0
+
+id		= 6
+dsClassificao	= 1.2.0002
+dsApelido	= "CEF"
+dsDescricao	= "Caixa Econômica Federal Conta Corrente"
+tpConta		= 1
+dtCadastro	= 2017/05/01 14:58:22
+boStatus	= 0
+
+****************************************************************
+1         - TOTAL GERAL
+1.01      - CAIXA GERAL
+1.01.0001 - Caixa João
+1.01.0002 - Caixa Maria
+
+1.02      - BANCOS CONTA MOVIMENTO
+1.02.0001 - Banco do Brasil
+1.02.0002 - Caixa Econômica Federal
+
+1.03      - APLICAÇÕES DE LIQUIDEZ IMEDIATA
+1.03.0001 - Banco do Brasil Aplicações
+1.03.0002 - Viacredi Aplicações
+
+1.04      - APLICAÇÕES E POUPANÇA
+1.04.0001 - Banco do Brasil Aplicações
+1.04.0002 - Viacredi Aplicações
+
+****************************************************************
+
+
+
+TLancamento:
+id		= 1
+dtLancto	= 2017/05/14 15:04:02
+cdCategoria	= 6
+tpLancto        = E
+vlValor  	= 15.50
+cdTpCliFor	= 0
+cdCliFor	= 1
+dsDocto		= "RECIBO NRO 13"
+cdHisto		= 1
+dsHisto		= "VALOR RECEBIDO DE FULANO REFERENTE PRESTAÇÃO DE SERVIÇOS"
+boStatus	= 0
+
+
+
+
+Controlar o Contas A Receber
+Tipos:
+TCtaRecDocto:
+	id		--> I     - id único
+	cdTpEmitente  	--> I     - -1: Indefinido || 0-Cliente || 1-Fornecedor
+	cdEmitente     	--> I     - código do emitente
+	dsDocto        	--> X(30) - documento
+	dtEmissao      	--> Dt    - data emissão 
+	cdParcelas     	--> I     - quantidade de parcelas
+	cdTpParce       --> I     - Tipo de parcelamento: 0-Fixo || 1-Continuo
+	dtPrimParc	--> Dt	  - data da primeira parcela
+	vlPrimParc	--> N	  - valor da primeira parcela
+	cdDiaFixo	--> I     - dia fixo de vencimento
+	vlPrincipal	--> N	  - valor principal
+	vlEntrada 	--> N	  - valor da entrada
+	vlAcrescimo	--> N	  - valor do acrescimo
+	vlDesconto	--> N  	  - valor do desconto
+	vlTotal		--> N  	  - valor total
+	vlPago		--> N     - valor ja pago --> Atualizado por trigger
+        dsHistorido     --> X(255)
+	boStatus	--> B     - 0-Ativo ou 1-Inativo
+
+TCtaRecParce
+	id		--> I 	  - id único
+	cdDocto   	--> I 	  - id do TCtaPagDocto
+	cdParcela	--> I 	  - Número da parcela
+	dtVencto	--> D	  - Data de vencimento
+	VlValor         --> N	  - Valor da parcela
+	boStatus 	--> B     - 0-Ativo ou 1-Inativo
+
+TCtaRecParceBaixa
+	id	 	--> I	  - id único
+	idParcela	--> I     - id da TCtaPagParce
+	cdTpMoeda	--> I 	  - Tipo de moeda
+	dtBaixa		--> DH	  - Data e hora da baixa
+	vlVlrPrincipal  --> N	  - Valor principal
+	vlVlrJuros      --> N     - Valor de Juros
+	vlVlrMulta      --> N     - Valor da Multa de Mora
+	vlVlrDesconto   --> N     - Valor do Desconto
+	vlVlrTotal      --> N     - Valor total recebido (Pri+Jur+Mul-Des)
+	dsHistotico     --> X(255)- Histórico da baixa
+	boStatus        --> I     - 0-Ativo ou 1-Inativo
+
+
+
+
+Controlar o Contas A Pagar
+
+Tipos:
+TCtaPagDocto:
+	id		--> I     - id único
+	cdTpEmitente  	--> I     - -1: Indefinido || 0-Cliente || 1-Fornecedor
+	cdEmitente     	--> I     - código do emitente
+	dsDocto        	--> X(30) - documento
+	dtEmissao      	--> Dt    - data emissão 
+	cdParcelas     	--> I     - quantidade de parcelas
+	cdTpParce       --> I     - Tipo de parcelamento: 0-Fixo || 1-Continuo
+	dtPrimParc	--> Dt	  - data da primeira parcela
+	vlPrimParc	--> N	  - valor da primeira parcela
+	cdDiaFixo	--> I     - dia fixo de vencimento
+	vlPrincipal	--> N	  - valor principal
+	vlEntrada 	--> N	  - valor da entrada
+	vlAcrescimo	--> N	  - valor do acrescimo
+	vlDesconto	--> N  	  - valor do desconto
+	vlTotal		--> N  	  - valor total
+	vlPago		--> N     - valor ja pago --> Atualizado por trigger
+        dsHistorido     --> X(255)
+	boStatus	--> B     - 0-Ativo ou 1-Inativo
+
+TCtaPagParce
+	id		--> I 	  - id único
+	cdDocto   	--> I 	  - id do TCtaPagDocto
+	cdParcela	--> I 	  - Número da parcela
+	dtVencto	--> D	  - Data de vencimento
+	VlValor         --> N	  - Valor da parcela
+	boStatus 	--> B     - 0-Ativo ou 1-Inativo
+
+TCtaPagParceBaixa
+	id	 	--> I	  - id único
+	idParcela	--> I     - id da TCtaPagParce
+	cdTpMoeda	--> I 	  - Tipo de moeda
+	dtBaixa		--> DH	  - Data e hora da baixa
+	vlVlrPrincipal  --> N	  - Valor principal
+	vlVlrJuros      --> N     - Valor de Juros
+	vlVlrMulta      --> N     - Valor da Multa de Mora
+	vlVlrDesconto   --> N     - Valor do Desconto
+	vlVlrTotal      --> N     - Valor total recebido (Pri+Jur+Mul-Des)
+	dsHistotico     --> X(255)- Histórico da baixa
+	boStatus        --> I     - 0-Ativo ou 1-Inativo

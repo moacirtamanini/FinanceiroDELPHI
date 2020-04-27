@@ -1,0 +1,51 @@
+object Frame_Cartao: TFrame_Cartao
+  Left = 0
+  Top = 0
+  Width = 257
+  Height = 38
+  TabOrder = 0
+  object lbCodigo: TLabel
+    Left = 3
+    Top = 1
+    Width = 33
+    Height = 13
+    Caption = 'Cart'#227'o'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object edCartao: TEdit
+    Left = 3
+    Top = 16
+    Width = 231
+    Height = 19
+    CharCase = ecUpperCase
+    Ctl3D = False
+    MaxLength = 100
+    ParentCtl3D = False
+    TabOrder = 0
+    OnExit = edCartaoExit
+  end
+  object spBusca: TPanel
+    Left = 234
+    Top = 16
+    Width = 21
+    Height = 19
+    BevelOuter = bvNone
+    Caption = '2'
+    Color = 12615680
+    Ctl3D = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Marlett'
+    Font.Style = []
+    ParentCtl3D = False
+    ParentFont = False
+    TabOrder = 1
+    OnClick = spBuscaClick
+  end
+end

@@ -1,0 +1,60 @@
+object frame_Categoria: Tframe_Categoria
+  Left = 0
+  Top = 0
+  Width = 248
+  Height = 38
+  TabOrder = 0
+  object lbCodigo: TLabel
+    Left = 3
+    Top = 1
+    Width = 47
+    Height = 13
+    Caption = 'Categoria'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object edCodigo: TEdit
+    Left = 3
+    Top = 16
+    Width = 216
+    Height = 19
+    Hint = 'F2 - Pesquisar            F6 - Cadastro'
+    Ctl3D = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    MaxLength = 200
+    ParentCtl3D = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    OnExit = edCodigoExit
+    OnKeyDown = edCodigoKeyDown
+  end
+  object spBusca: TPanel
+    Left = 219
+    Top = 16
+    Width = 21
+    Height = 19
+    BevelOuter = bvNone
+    Caption = '2'
+    Color = 12615680
+    Ctl3D = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Marlett'
+    Font.Style = []
+    ParentCtl3D = False
+    ParentFont = False
+    TabOrder = 1
+    OnClick = spBuscaClick
+  end
+end

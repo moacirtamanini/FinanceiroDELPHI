@@ -1,0 +1,15 @@
+(V 1.0) 08:06:29: 
+Agendamento:
+             Conjunto=OUTROS
+             Horário: 2018/06/27 08:58:00 - Semanal
+             Base=OUTROS - 2
+             Servidor=localhost
+             Path=C:\GED\Dados\GEDNEW_2709.GDB
+Erro ao gravar o arquivo de log: C:\bluckupApl\LOGs\LogDoBKP_2019_10_03.txt
+08:06:29: 
+Agendamento:
+             Conjunto=OUTROS
+             Horário: 2018/06/27 08:58:00 - Semanal
+             Base=OUTROS - 2
+             Servidor=localhost
+             Path=C:\GED\Dados\GEDNEW_2709.GDB
